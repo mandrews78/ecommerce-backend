@@ -11,12 +11,13 @@ Category.init(
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
-            autoIncrement: true
+            autoIncrement: true,
+            onDelete: 'SET NULL'
         },
         category_name: {
             type: DataTypes.STRING,
             allowNull: false
-        }
+        },
     },
     {
         sequelize,
